@@ -13,15 +13,15 @@ const OWL: &str = r#"
 // --- Colors ---
 // Owl
 pub fn owl() -> String {
-    OWL.yellow().to_string()
+    OWL.to_string()
 }
 
 // Date
 pub fn print_date(date: &str) {
-    println!("{}", date.blue());
+    println!("{}", date.white());
 }
 
 // Quote
 pub fn print_quote(quote: &str) {
-    println!("{}", quote.yellow());
+    println!("{}", quote.green());
 }
