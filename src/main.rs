@@ -4,8 +4,9 @@ mod system;
 mod ui;
 
 fn main() {
-    // Print owl
-    println!("{}", ui::owl());
+    // Print owl + system info
+    let sysdis = system::systeminfo();
+    ui::print_display(&sysdis);
 
     // Print date
     let date = date::today();
@@ -14,8 +15,4 @@ fn main() {
     // Print quote
     let quote = quotes::random();
     ui::print_quote(&quote);
-
-    system::systeminfo();
-    // let sysdis = system::systeminfo();
-    // ui::print_system(&sysdis);
 }

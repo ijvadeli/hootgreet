@@ -1,8 +1,7 @@
 use colored::Colorize;
 
 // Owl ascii art
-const OWL: &str = r#"
-   , _ ,
+const OWL: &str = r#"   , _ ,
   ( o,o )
  /'` - `'\
  |'''''''|
@@ -12,8 +11,17 @@ const OWL: &str = r#"
 
 // --- Colors ---
 // Owl
-pub fn owl() -> String {
-    OWL.to_string()
+pub fn print_display(sysdis: &str) {
+    let owl: Vec<&str> = OWL.lines().collect();
+    let sys: Vec<&str> = sysdis.lines().collect();
+
+    for i in 0..owl.len().max(sys.len()) {
+        println!(
+            "{:<16}{}",
+            owl.get(i).unwrap_or(&"").green(),
+            sys.get(i).unwrap_or(&"")
+        );
+    }
 }
 
 // Date
@@ -25,8 +33,3 @@ pub fn print_date(date: &str) {
 pub fn print_quote(quote: &str) {
     println!("{}", quote.green());
 }
-
-// System info
-// pub fn print_system(sysdis: &str) {
-//     println!("{}", sysdis.green());
-// }
