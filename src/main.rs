@@ -5,12 +5,9 @@ mod ui;
 
 fn main() {
     // Print owl + system info
-    let sysdis = system::systeminfo();
-    ui::print_display(&sysdis);
-
-    // Print date
     let date = date::today();
-    ui::print_date(&date);
+    let sysdis = system::systeminfo();
+    ui::print_display(&date, &sysdis);
 
     // Print quote
     let quote = quotes::random();
