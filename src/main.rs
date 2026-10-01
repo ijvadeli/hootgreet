@@ -1,5 +1,6 @@
 mod date;
 mod quotes;
+mod system;
 mod ui;
 
 fn main() {
@@ -13,4 +14,8 @@ fn main() {
     // Print quote
     let quote = quotes::random();
     ui::print_quote(&quote);
+
+    system::systeminfo();
+    // let sysdis = system::systeminfo();
+    // ui::print_system(&sysdis);
 }

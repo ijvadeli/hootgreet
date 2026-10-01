@@ -18,10 +18,15 @@ pub fn owl() -> String {
 
 // Date
 pub fn print_date(date: &str) {
-    println!("{}", date.white());
+    println!("{}", date);
 }
 
 // Quote
 pub fn print_quote(quote: &str) {
     println!("{}", quote.green());
 }
+
+// System info
+// pub fn print_system(sysdis: &str) {
+//     println!("{}", sysdis.green());
+// }
