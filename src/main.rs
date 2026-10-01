@@ -1,14 +1,13 @@
 mod date;
 mod quotes;
+mod system;
 mod ui;
 
 fn main() {
-    // Print owl
-    println!("{}", ui::owl());
-
-    // Print date
+    // Print owl + system info
     let date = date::today();
-    ui::print_date(&date);
+    let sysdis = system::systeminfo();
+    ui::print_display(&date, &sysdis);
 
     // Print quote
     let quote = quotes::random();
